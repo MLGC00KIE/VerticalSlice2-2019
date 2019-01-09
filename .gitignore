@@ -5,6 +5,9 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
+# Photoshop files because Calvin!
+*.psd
+
 # Visual Studio cache directory
 .vs/
 
