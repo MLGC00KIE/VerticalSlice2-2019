@@ -6,6 +6,7 @@ TagManager:
   tags:
   - jumpWall
   - ground
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
