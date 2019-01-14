@@ -4,10 +4,13 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(PlayerWallSlide))]
 public class PlayerMovement : MonoBehaviour {
 
     Collider2D wall;
     Collider2D ground;
+
+    PlayerWallSlide wallSlide;
 
     Rigidbody2D rb;
     Collider2D playerCollider;
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        wallSlide = GetComponent<PlayerWallSlide>();
 
         ground = GameObject.FindGameObjectWithTag("ground").GetComponent<Collider2D>();
         wall = GameObject.FindGameObjectWithTag("jumpWall").GetComponent<Collider2D>();
@@ -36,6 +40,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             TryJump();
         }
+        CheckForWallSlide();
 	}
 
     void Move()
@@ -96,6 +101,17 @@ public class PlayerMovement : MonoBehaviour {
             return true;
         }
         return false;
+    }
+
+    private void CheckForWallSlide()
+    {
+        if(IsOnWall())
+        {
+            wallSlide.WallSlide(true);
+        } else
+        {
+            wallSlide.WallSlide(false);
+        }
     }
 
     private bool IsOnWall()
