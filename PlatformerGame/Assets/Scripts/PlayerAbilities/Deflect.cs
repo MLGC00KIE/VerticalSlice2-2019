@@ -15,11 +15,11 @@ public class Deflect : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Deflect")
+
+        if (collision.gameObject.tag == "Deflect" && Input.GetKey(KeyCode.K))
             {
-                GameObject disableScript = GameObject.Find("DeflectableObject");
-                disableScript.GetComponent<tempMove>().enabled = false;
-                transform.position += transform.right * deflectedSpeed * Time.deltaTime;
+                GameObject finder = GameObject.Find("DeflectableObject");
+                finder.GetComponent<tempMove>().InverseMovement();
                 Debug.Log("collide");
             }
         }

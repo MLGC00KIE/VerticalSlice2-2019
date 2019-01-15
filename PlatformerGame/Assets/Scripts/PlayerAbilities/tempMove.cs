@@ -5,10 +5,21 @@ using UnityEngine;
 public class tempMove : MonoBehaviour {
     
     public float Speed;
+    Vector3 movement;
+
+    private void Start()
+    {
+        movement = -transform.right;
+    }
     void Update()
     {
-        transform.position += -transform.right * Speed * Time.deltaTime;
+        transform.position += movement * Speed * Time.deltaTime;
         
+    }
+
+    public void InverseMovement()
+    {
+        movement = new Vector3(transform.position.x * -1, 0, 0);
     }
 
 }
