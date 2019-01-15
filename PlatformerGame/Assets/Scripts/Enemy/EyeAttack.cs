@@ -14,14 +14,6 @@ public class EyeAttack : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyUp(KeyCode.Space)) {
-            ShootProjectile();
-        }
-        Destroy(Projectile);
-    }
-
     public void ShootProjectile()
     {
         Rigidbody2D instantiatedProjectile = Instantiate(Projectile, transform.position, transform.rotation)as Rigidbody2D;

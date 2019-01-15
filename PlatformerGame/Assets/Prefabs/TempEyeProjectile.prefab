@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4900206401666030}
   - component: {fileID: 33909482514726744}
   - component: {fileID: 23846059633592122}
-  - component: {fileID: 114336185505712194}
   - component: {fileID: 50911248219233230}
   m_Layer: 0
   m_Name: TempEyeProjectile
@@ -37,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1346608403332332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.604744, y: -0.06091816, z: -0.08984375}
+  m_LocalPosition: {x: 17.713667, y: -0.06091816, z: -0.08984375}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,15 +104,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &114336185505712194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1346608403332332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2216a4712b4ff5e418421570ec52d6d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
