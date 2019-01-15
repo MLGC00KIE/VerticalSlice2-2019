@@ -9,11 +9,12 @@ public class EnemyEyeAttack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        ShootProjectile();
 	}
 
     public void ShootProjectile()
     {
-        Projectile.transform.position += transform.left * speed * Time.deltaTime;
+        Projectile.transform.position += transform.right * speed * Time.deltaTime;
+        Debug.Log("Projectile fired");
     }
 }
