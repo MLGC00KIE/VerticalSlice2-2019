@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void WallJump()
     {
-        Vector2 jumpForce = new Vector2(jumpHeight, jumpHeight);
+        Vector2 jumpForce = new Vector2(jumpHeight * 0.75f, jumpHeight * 0.75f);
         rb.AddForce(jumpForce, ForceMode2D.Impulse);
     }
 
