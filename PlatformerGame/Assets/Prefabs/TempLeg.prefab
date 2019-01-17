@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321111437217666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.743672, y: 2.077811, z: 0}
+  m_LocalPosition: {x: -7.743672, y: 6021.1313, z: 0}
   m_LocalScale: {x: -0.7772274, y: -1.7224983, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyLeg: {fileID: 1321111437217666}
   LegAttackHeight: 150
+  LegAttackSpeed: 0
 --- !u!136 &136048311701763628
 CapsuleCollider:
   m_ObjectHideFlags: 1

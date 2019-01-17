@@ -6,7 +6,7 @@ public class EnemyAttacks : MonoBehaviour {
 
     public EyeAttack eyeAttack;
     public EnemyLegAttack enemyLegAttack;
-    public GameObject EnemyLeg;//reference to the leg
+    public GameObject EnemyLeg;
     public GameObject TempEnemy;
 
     void Scripts()
@@ -35,9 +35,9 @@ public class EnemyAttacks : MonoBehaviour {
 
     public IEnumerator LegAttackTimer(GameObject EnemyLeg)
     {
-        enemyLegAttack.LegAttack(); Debug.Log("Attacked");
-        yield return new WaitForSeconds(3.5f);//wait certain amount of time before retreating the leg
-        enemyLegAttack.LegRetreat(); Debug.Log("Retreaded");
+        enemyLegAttack.LegAttack(); 
+        yield return new WaitForSeconds(3.5f);
+        enemyLegAttack.LegRetreat(); 
         StartTimer();
     }
 
