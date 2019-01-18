@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class EnemyLegAttack : MonoBehaviour {
 
-    public GameObject EnemyLeg;//reference to the leg
-    public float LegAttackHeight;//the speed at wich the leg goes up
-    public float LegAttackSpeed;
+    public GameObject EnemyLeg;   
+    
+    [SerializeField]
+    private float speed;
+    private float startTime;
+    private float attackLength;
+    private Vector3 travelSpeed;
 
     public void LegAttack()
     {
-        EnemyLeg.transform.position += transform.up * LegAttackHeight * LegAttackSpeed;
+        travelSpeed = EnemyLeg.transform.up * 3;
+        startTime = Time.time;
+        attackLength = Vector3.Distance(EnemyLeg.transform.position, travelSpeed * speed);
+        float distanceCovered = (Time.time - startTime) * speed;
+        float fracLength = distanceCovered / attackLength;
+        EnemyLeg.transform.position = Vector3.Lerp(EnemyLeg.transform.position, EnemyLeg.transform.position + EnemyLeg.transform.up * 0.5f, fracLength);
         Debug.Log("attacked");
     }
 
     public void LegRetreat()
     {
-        EnemyLeg.transform.position += -transform.up * LegAttackHeight * LegAttackSpeed;
+        startTime = Time.time;
+        attackLength = Vector3.Distance(EnemyLeg.transform.position, travelSpeed * speed);
+        float distanceCovered = (Time.time - startTime) * speed;
+        float fracLength = distanceCovered / attackLength;
+        EnemyLeg.transform.position = -Vector3.Lerp(EnemyLeg.transform.position, EnemyLeg.transform.position + EnemyLeg.transform.up * 0.5f, fracLength);
         Debug.Log("Retreaded");
     }
 }

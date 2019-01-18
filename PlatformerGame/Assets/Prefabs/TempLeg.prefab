@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4828881675373042}
   - component: {fileID: 33869764333625462}
   - component: {fileID: 23608381921601678}
-  - component: {fileID: 136048311701763628}
   - component: {fileID: 114920453613371274}
+  - component: {fileID: 50834160264074074}
   m_Layer: 0
   m_Name: TempLeg
   m_TagString: Untagged
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321111437217666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.743672, y: 6021.1313, z: 0}
-  m_LocalScale: {x: -0.7772274, y: -1.7224983, z: 1}
+  m_LocalPosition: {x: -5.98, y: -1.82, z: 0}
+  m_LocalScale: {x: 0.48271057, y: -1.7224983, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,6 +85,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1321111437217666}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!50 &50834160264074074
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1321111437217666}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!114 &114920453613371274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,18 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyLeg: {fileID: 1321111437217666}
-  LegAttackHeight: 150
-  LegAttackSpeed: 0
---- !u!136 &136048311701763628
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1321111437217666}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  speed: 0.1

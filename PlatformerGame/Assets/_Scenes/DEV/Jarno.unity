@@ -122,11 +122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4828881675373042, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.28
+      value: -5.98
       objectReference: {fileID: 0}
     - target: {fileID: 4828881675373042, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.73
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 4828881675373042, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -152,37 +152,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114920453613371274, guid: 9a8398cd47e8c1c4284b8f4d58957a9a,
-        type: 2}
-      propertyPath: LegBeginLocation
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114920453613371274, guid: 9a8398cd47e8c1c4284b8f4d58957a9a,
-        type: 2}
-      propertyPath: LegMoveTowards
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114920453613371274, guid: 9a8398cd47e8c1c4284b8f4d58957a9a,
-        type: 2}
-      propertyPath: LegAttackSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1321111437217666, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114920453613371274, guid: 9a8398cd47e8c1c4284b8f4d58957a9a,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114920453613371274, guid: 9a8398cd47e8c1c4284b8f4d58957a9a,
-        type: 2}
-      propertyPath: LegAttackHeight
-      value: 0.6
-      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 136048311701763628, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
+    - {fileID: 114920453613371274, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &560977815
@@ -223,6 +194,10 @@ Prefab:
     - target: {fileID: 4900206401666030, guid: 59e8d30a64f988d418dcc45aee47687d, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346608403332332, guid: 59e8d30a64f988d418dcc45aee47687d, type: 2}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59e8d30a64f988d418dcc45aee47687d, type: 2}
@@ -318,26 +293,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1321111437217666, guid: 9a8398cd47e8c1c4284b8f4d58957a9a,
     type: 2}
   m_PrefabInternal: {fileID: 281928134}
---- !u!50 &1559362779
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1559362778}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!1 &1598402469
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,9 +325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d25c0dee99d5c4144bd7c5b83aab0526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyLeg: {fileID: 1321111437217666, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
-  LegAttackHeight: 0.6
-  LegAttackSpeed: 5
+  EnemyLeg: {fileID: 1559362778}
+  speed: 0.1
 --- !u!65 &1598402471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -468,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyeAttack: {fileID: 1598402475}
   enemyLegAttack: {fileID: 1598402470}
-  EnemyLeg: {fileID: 1321111437217666, guid: 9a8398cd47e8c1c4284b8f4d58957a9a, type: 2}
+  EnemyLeg: {fileID: 1559362778}
   TempEnemy: {fileID: 1598402469}
 --- !u!1 &1883600021
 GameObject:
