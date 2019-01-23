@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Deflector
-  - DeflectObject
-  - Deflect
-  - player
+  - jumpWall
+  - ground
   - EnemyAttack
   layers:
   - Default
