@@ -19,6 +19,6 @@ public class EyeAttack : MonoBehaviour
         
         Rigidbody2D instantiatedProjectile = Instantiate(Projectile, transform.position, transform.rotation)as Rigidbody2D;
         instantiatedProjectile.velocity = (target.position - transform.position).normalized * speed;
-        Debug.Log("That's a lot of damage");
+        Debug.Log("Projectile fired");
     }    
 }
