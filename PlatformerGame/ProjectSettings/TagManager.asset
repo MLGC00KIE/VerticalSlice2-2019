@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - projectile
+  - Deflector
+  - DeflectObject
+  - Deflect
+  - player
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
@@ -13,12 +16,12 @@ TagManager:
   - 
   - Water
   - UI
+  - jumpWall
+  - ground
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Ground
   - 
   - 
   - 
