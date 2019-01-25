@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tempMove : MonoBehaviour {
+public class EyeballMovement : MonoBehaviour {
     
     public float Speed;
     Vector3 movement;

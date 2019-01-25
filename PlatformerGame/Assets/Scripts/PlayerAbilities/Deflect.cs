@@ -19,7 +19,7 @@ public class Deflect : MonoBehaviour
         if (collision.gameObject.tag == "Deflect" && Input.GetKey(KeyCode.K))
             {
                 GameObject finder = GameObject.Find("DeflectableObject");
-                finder.GetComponent<tempMove>().InverseMovement();
+                finder.GetComponent<EyeballMovement>().InverseMovement();
                 Debug.Log("collide");
             }
         }
