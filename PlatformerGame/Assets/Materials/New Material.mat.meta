@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:PlatformerGame/Assets/Materials/New Material.mat.meta
 guid: 0c3a62e57c49849429d2d7b3871ab9d7
+=======
+guid: 30a5cb1e8022dc14da1d7d854f58927c
+>>>>>>> artist:PlatformerGame/Assets/Sprites/Placeholder/Character/GameObject.controller.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
