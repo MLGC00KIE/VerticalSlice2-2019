@@ -5,12 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(PlayerWallSlide))]
+[RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour {
 
     Collider2D wall;
     Collider2D ground;
 
     PlayerWallSlide wallSlide;
+
+    Animator anim;
 
     Rigidbody2D rb;
     Collider2D playerCollider;
@@ -28,6 +31,7 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         wallSlide = GetComponent<PlayerWallSlide>();
+        anim = GetComponent<Animator>();
 
         ground = GameObject.FindGameObjectWithTag("ground").GetComponent<Collider2D>();
         wall = GameObject.FindGameObjectWithTag("jumpWall").GetComponent<Collider2D>();
@@ -47,6 +51,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0);
         rb.AddForce(xMov);
+        anim.SetBool("isRunning", true);
         // stop player sliding so much when stopping
         if (IsGrounded() && !IsOnWall() && (Input.GetAxisRaw("Horizontal") == 0) && !canJump)
         {
@@ -82,7 +87,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void WallJump()
     {
-        Vector2 jumpForce = new Vector2(jumpHeight, jumpHeight);
+        Vector2 jumpForce = new Vector2(jumpHeight * 0.75f, jumpHeight * 0.75f);
         rb.AddForce(jumpForce, ForceMode2D.Impulse);
     }
 
