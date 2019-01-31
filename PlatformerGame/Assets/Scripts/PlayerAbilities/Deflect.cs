@@ -16,7 +16,7 @@ public class Deflect : MonoBehaviour
     void OnTriggerEnter(Collider collision)
     {
 
-        if (collision.gameObject.tag == "Deflect" && Input.GetKey(KeyCode.K))
+        if (collision.gameObject.tag == "projectile" && Input.GetKey(KeyCode.K))
             {
                 GameObject finder = GameObject.Find("DeflectableObject");
                 finder.GetComponent<EyeballMovement>().InverseMovement();
