@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour {
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0);
         rb.AddForce(xMov);
 
-        if(xMov.x != 0)
+        if(xMov.x != 0 && !IsOnWall())
         {
             anim.SetBool("isRunning", true);
         } else
