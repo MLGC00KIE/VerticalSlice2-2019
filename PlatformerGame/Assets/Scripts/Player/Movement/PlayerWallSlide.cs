@@ -10,7 +10,7 @@ public class PlayerWallSlide : MonoBehaviour {
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
     }
 
 

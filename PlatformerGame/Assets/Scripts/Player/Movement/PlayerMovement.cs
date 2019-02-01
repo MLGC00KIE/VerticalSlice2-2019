@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         wallSlide = GetComponent<PlayerWallSlide>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
 
         ground = GameObject.FindGameObjectWithTag("ground").GetComponent<Collider2D>();
         wall = GameObject.FindGameObjectWithTag("jumpWall").GetComponent<Collider2D>();
