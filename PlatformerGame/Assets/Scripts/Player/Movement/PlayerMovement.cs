@@ -50,14 +50,23 @@ public class PlayerMovement : MonoBehaviour {
     {
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0);
         rb.AddForce(xMov);
+
+        if(xMov.x != 0)
+        {
+            anim.SetBool("isRunning", true);
+        } else
+        {
+            anim.SetBool("isRunning", false);
+        }
+
         // stop player sliding so much when stopping
         if (IsGrounded() && !IsOnWall() && (Input.GetAxisRaw("Horizontal") == 0) && !canJump)
         {
             rb.velocity = new Vector2(rb.velocity.x /2, rb.velocity.y);
         }
 
-        if (xMov.x < 0 && isFacingRight){ FlipPlayer(); isFacingRight = false; }
-        else if(xMov.x > 0 && !isFacingRight) { FlipPlayer(); isFacingRight = true; }
+        if (xMov.x < 0 && isFacingRight){ FlipPlayer(-0.2f);}
+        else if(xMov.x > 0 && !isFacingRight) { FlipPlayer(0.2f);}
 
     }
 
@@ -89,11 +98,18 @@ public class PlayerMovement : MonoBehaviour {
         rb.AddForce(jumpForce, ForceMode2D.Impulse);
     }
 
-    void FlipPlayer()
+    void FlipPlayer(float xRot)
     {
         Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
+        theScale.x = xRot;
         transform.localScale = theScale;
+        if(xRot > 0)
+        {
+            isFacingRight = true;
+        } else if(xRot < 0)
+        {
+            isFacingRight = false;
+        }
     }
 
     private bool IsGrounded()
@@ -110,9 +126,11 @@ public class PlayerMovement : MonoBehaviour {
     {
         if(IsOnWall())
         {
-            wallSlide.WallSlide(true);
+            anim.SetBool("isWallSliding", isWallSliding);
+            FlipPlayer(0.2f);
         } else
         {
+            anim.SetBool("isWallSliding", isWallSliding);
             wallSlide.WallSlide(false);
         }
     }
@@ -121,8 +139,10 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (!playerCollider.IsTouching(ground) && playerCollider.IsTouching(wall))
         {
+            isWallSliding = true;
             return true;
         }
+        isWallSliding = false;
         return false;
     }
 

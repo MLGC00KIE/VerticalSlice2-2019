@@ -16,8 +16,7 @@ public class PlayerWallSlide : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (isWallSliding == true)
-            DoWallSlide();
+            CheckWallSlide();
 	}
 
     public void WallSlide(bool input)
@@ -25,9 +24,8 @@ public class PlayerWallSlide : MonoBehaviour {
         isWallSliding = input;
     }
 
-    void DoWallSlide()
+    void CheckWallSlide()
     {
-        anim.Play("WallSlide");
-        Debug.Log("sliding animation...");
+        
     }
 }
