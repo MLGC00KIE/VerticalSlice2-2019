@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(PlayerWallSlide))]
-[RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour {
 
     Collider2D wall;
@@ -51,7 +50,6 @@ public class PlayerMovement : MonoBehaviour {
     {
         Vector2 xMov = new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0);
         rb.AddForce(xMov);
-        anim.SetBool("isRunning", true);
         // stop player sliding so much when stopping
         if (IsGrounded() && !IsOnWall() && (Input.GetAxisRaw("Horizontal") == 0) && !canJump)
         {
