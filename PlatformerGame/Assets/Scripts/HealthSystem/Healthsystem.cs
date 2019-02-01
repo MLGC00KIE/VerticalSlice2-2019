@@ -26,14 +26,14 @@ public class Healthsystem : MonoBehaviour {
     void Update () {
         if(Health == 2)
         {
-            upperLeft.transform.position = new Vector3(-9.23f, 5, 0.1000408f);
-            upperRight.transform.position = new Vector3(9.23f, 5, 0.1000408f);
+            upperLeft.transform.position = new Vector3(-7.78f, 3.17f, 0.7773438f);
+            upperRight.transform.position = new Vector3(7.78f, 3.17f, 0.7773438f);
         }
 
         if(Health == 1)
         {
-            upperLeft.transform.position = new Vector3(7.5f, 3, 0.1000408f);
-            upperRight.transform.position = new Vector3(-7.5f, 3, 0.1000408f);
+            upperLeft.transform.position = new Vector3(-5.4f, 1.81f, 0.7773438f);
+            upperRight.transform.position = new Vector3(5.4f, 1.81f, 0.7773438f);
         }
 
         if (Health == 0)

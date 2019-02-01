@@ -25,7 +25,7 @@ public class Fade : MonoBehaviour
 
         yield return new WaitForSeconds(flashTime);
 
-        fade.transform.position = new Vector3(0, 15, 0);
+        fade.transform.position = new Vector3(0, 15, 10);
     }
     /*
     private void OnCollisionExit(Collision playerHitBox)
