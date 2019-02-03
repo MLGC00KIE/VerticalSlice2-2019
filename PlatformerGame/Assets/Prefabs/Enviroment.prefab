@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 427207421}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: jumpWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,8 +109,8 @@ PolygonCollider2D:
       - {x: -7.085943, y: -2.8280165}
       - {x: -7.4373684, y: -2.4462452}
       - {x: -7.8508787, y: -1.8460045}
-      - {x: -8.070949, y: -1.2027559}
-      - {x: -8.047531, y: 5.3897123}
+      - {x: -8.053266, y: -1.202756}
+      - {x: -8.124306, y: 5.396896}
       - {x: -9.599999, y: 5.4}
       - {x: -9.599999, y: -5.4}
 --- !u!1 &7327206646324164365
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 1098579524}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
