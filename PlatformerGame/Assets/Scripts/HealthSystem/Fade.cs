@@ -11,12 +11,17 @@ public class Fade : MonoBehaviour
        
     }
 
-    void OnCollisionEnter(Collision playerHitBox)
+    //void OnCollisionEnter(Collision playerHitBox)
+    //{
+    //    if (playerHitBox.gameObject.tag == "EnemyAttack")
+    //    {
+    //        StartCoroutine(HitFlash());
+    //    }
+    //}
+
+    public void DoHitFlash()
     {
-        if (playerHitBox.gameObject.tag == "EnemyAttack")
-        {
-            StartCoroutine(HitFlash());
-        }
+        StartCoroutine(HitFlash());
     }
 
     IEnumerator HitFlash()

@@ -22,7 +22,7 @@ public class EnemyAttacks : MonoBehaviour {
 
     public IEnumerator EyeAttackTimer(GameObject TempEnemy)
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(1.5f);
         eyeAttack.ShootProjectile();
     }
      

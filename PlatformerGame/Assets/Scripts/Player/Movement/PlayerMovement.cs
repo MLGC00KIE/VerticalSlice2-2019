@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     Collider2D playerCollider;
 
     [SerializeField]
-    float speed, jumpHeight, jumpCooldown;
+    float speed, jumpHeight, jumpCooldown, wallJumpBoost;
 
     bool hasWallJumped = false;
     bool canJump = true;
@@ -90,12 +90,14 @@ public class PlayerMovement : MonoBehaviour {
     {
         Vector2 jumpForce = new Vector2(0, jumpHeight);
         rb.AddForce(jumpForce, ForceMode2D.Impulse);
+        anim.SetTrigger("doJump");
     }
 
     void WallJump()
     {
-        Vector2 jumpForce = new Vector2(jumpHeight * 0.75f, jumpHeight * 0.75f);
+        Vector2 jumpForce = new Vector2(jumpHeight - wallJumpBoost, jumpHeight + wallJumpBoost);
         rb.AddForce(jumpForce, ForceMode2D.Impulse);
+        anim.SetTrigger("doWallJump");
     }
 
     void FlipPlayer(float xRot)

@@ -6,19 +6,15 @@ public class EyeAttack : MonoBehaviour
 {
 
     public Rigidbody2D Projectile;
-    public Transform target;
     public float speed = 7.0f;
 
-    private void Start()
-    {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-    }
+    [SerializeField]
+    private Transform eyePos;
 
     public void ShootProjectile()
     {
         
-        Rigidbody2D instantiatedProjectile = Instantiate(Projectile, transform.position, transform.rotation)as Rigidbody2D;
-        instantiatedProjectile.velocity = (target.position - transform.position).normalized * speed;
-        Debug.Log("Projectile fired");
+        Rigidbody2D instantiatedProjectile = Instantiate(Projectile, eyePos.position, transform.rotation)as Rigidbody2D;
+        instantiatedProjectile.velocity = Vector2.left * speed;
     }    
 }

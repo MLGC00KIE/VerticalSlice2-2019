@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2211740890309292388}
   - component: {fileID: 6788368765148260255}
   - component: {fileID: 9024185799617748705}
-  - component: {fileID: 3039759275859686365}
   m_Layer: 0
   m_Name: EyeProjectile
   m_TagString: projectile
@@ -71,19 +70,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3039759275859686365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572182746205257153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e4869d3b45c3044996f0218e847d1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 20
 --- !u!1 &1965052109001475565
 GameObject:
   m_ObjectHideFlags: 0

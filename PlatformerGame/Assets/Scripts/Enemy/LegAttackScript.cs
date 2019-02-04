@@ -36,7 +36,7 @@ public class LegAttackScript : MonoBehaviour
 
         if (Vector3.Distance(transform.position, endMarker.position) == 0)
         {
-            StartCoroutine(wait());
+            StartCoroutine(Wait());
         } else if (Vector3.Distance(transform.position, startMarker.position) == 0 && !up) {
             move = false;
             up = true;
@@ -44,7 +44,7 @@ public class LegAttackScript : MonoBehaviour
         }
     }
 
-    IEnumerator wait()
+    IEnumerator Wait()
     {
         yield return new WaitForSeconds(3.5f / 2f);
         up = false;
