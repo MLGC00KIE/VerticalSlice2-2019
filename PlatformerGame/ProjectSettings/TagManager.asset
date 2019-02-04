@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - jumpWall
+  - ground
+  - EnemyAttack
+  - projectile
+  - Enemy
+  - reflectedProjectile
+  - leg
   layers:
   - Default
   - TransparentFX
@@ -15,8 +22,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Wall
+  - Ground
   - 
   - 
   - 
